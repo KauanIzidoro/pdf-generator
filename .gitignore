@@ -12,6 +12,7 @@ __pycache__/
 
 .python-version 
 poetry.lock
+*.pdf
 # Distribution / packaging
 .Python
 build/
