@@ -6,7 +6,31 @@ authors = ["KauanIzidoro <cnttbussineskauan@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "3.12.*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.5"
+markdown = "^3.7"
+pdfkit = "^1.0.0"
+wkhtmltopdf = "^0.2"
+taskipy = "^1.13.0"
+
+[tool.ruff]
+line-length = 79 # 80 caracteres por linha no máx.
+extend-exclude = ['migrations']
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.taskipy.tasks]
+run = 'python3 main.py'
+linter = 'ruff check .'
+format = 'ruff check . --fix'
 
 
 [build-system]
