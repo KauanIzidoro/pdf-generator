@@ -14,6 +14,9 @@ markdown = "^3.7"
 pdfkit = "^1.0.0"
 wkhtmltopdf = "^0.2"
 taskipy = "^1.13.0"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+reportlab = "^4.2.2"
 
 [tool.ruff]
 line-length = 79 # 80 caracteres por linha no máx.
@@ -29,6 +32,7 @@ quote-style = 'single'
 
 [tool.taskipy.tasks]
 run = 'python3 main.py'
+excel = 'python3 xlsx_converter.py'
 linter = 'ruff check .'
 format = 'ruff check . --fix'
 
